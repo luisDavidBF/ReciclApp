@@ -1,27 +1,32 @@
 import 'package:flutter/material.dart';
-import 'package:english_words/english_words.dart';
+import 'loginPage.dart';
+
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final wordPair = WordPair.random();
+
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+
       title: 'ReciclApp',
       theme: ThemeData(
-        primaryColor: Colors.greenAccent
+        dividerColor: Colors.grey,
+        primarySwatch: Colors.blue,
+          buttonTheme: ButtonThemeData(height: 40),
+          textTheme: TextTheme(
+            subhead: TextStyle(
+              fontSize: 18
+            ),
+          button: TextStyle(
+          fontSize: 16,
+          color: Colors.white
+      )
+      )
       ),
-      home: Scaffold(
-        appBar: AppBar(
 
-          title: Text('Reciclapp'),
-        ),
-        body: Center(
-          child: Text('ZorraLinezzz'),
-        ),
-      ),
+      home: LoginPage(),
     );
   }
 }
